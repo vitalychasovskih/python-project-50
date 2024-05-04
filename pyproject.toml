@@ -10,7 +10,10 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+flake8 = "^7.0.0"
 
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
 
 [build-system]
 requires = ["poetry-core"]
