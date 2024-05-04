@@ -8,4 +8,4 @@ parser.add_argument("-f",
                     help="set format of output")
 parser.add_argument("first_file", type=str)
 parser.add_argument("second_file", type=str)
-start = parser.parse_args()
+parser.parse_args()

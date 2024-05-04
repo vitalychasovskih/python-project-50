@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from gendiff.commands.gendiff import start
+from gendiff.commands.gendiff import parser
 
 
 def main():
-    start
+    parser
 
 
 if __name__ == '__main__':
