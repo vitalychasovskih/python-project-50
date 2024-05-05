@@ -31,7 +31,7 @@ def find_difference(dict1, dict2):
     return '{' + result + '\n}'
 
 
-def generate_diff():
+def generate_diff_parse():
     parser = argparse.ArgumentParser(description='Compares two '
                                                  'configuration files '
                                                  'and shows a difference.')
@@ -46,4 +46,10 @@ def generate_diff():
     second_file = args.second_file
     a = read_json_file(first_file)
     b = read_json_file(second_file)
+    print(find_difference(a, b))
+
+
+def generate_diff(path1, path2):
+    a = read_json_file(path1)
+    b = read_json_file(path2)
     print(find_difference(a, b))
