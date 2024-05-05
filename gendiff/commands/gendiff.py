@@ -52,4 +52,4 @@ def generate_diff_parse():
 def generate_diff(path1, path2):
     a = read_json_file(path1)
     b = read_json_file(path2)
-    print(find_difference(a, b))
+    return find_difference(a, b)
