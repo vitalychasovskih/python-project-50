@@ -18,12 +18,11 @@ def find_difference(dict1, dict2):
     merged_dictionary = {**dict1, **dict2}
     result = ''
     for key, value in sorted(merged_dictionary.items()):
-        if key in dict1 and key in dict2:
-            if dict1[key] == value:
-                result += f'\n    {key}: {get_formatted_value(value)}'
-            if dict1[key] != value:
-                result += f'\n  - {key}: {get_formatted_value(dict1[key])}'
-                result += f'\n  + {key}: {get_formatted_value(value)}'
+        if key in dict1 and key in dict2 and dict1[key] == value:
+            result += f'\n    {key}: {get_formatted_value(value)}'
+        if key in dict1 and key in dict2 and dict1[key] != value:
+            result += f'\n  - {key}: {get_formatted_value(dict1[key])}'
+            result += f'\n  + {key}: {get_formatted_value(value)}'
         if key in dict1 and key not in dict2:
             result += f'\n  - {key}: {get_formatted_value(dict1[key])}'
         if key not in dict1 and key in dict2:
