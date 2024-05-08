@@ -8,5 +8,5 @@ def test_generate_diff():
                                                           '/file2.json') == str
         assert generate_diff('tests/fixtures/file2.json', 'tests/fixtures'
                                                           '/file1.json') != str
-        assert generate_diff('tests/fixtures/file1.yml', 'tests/fixtures'
-                                                         '/file2.yml') == str
+        assert generate_diff('tests/fixtures/file1.yaml', 'tests/fixtures'
+                                                          '/file2.yml') == str
