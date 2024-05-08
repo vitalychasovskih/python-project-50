@@ -9,6 +9,7 @@ package-install:
 
 lint:
 	poetry run flake8 gendiff
+	poetry run flake8 tests
 
 uninstall:
 	pip uninstall hexlet-code
