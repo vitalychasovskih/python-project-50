@@ -8,8 +8,9 @@ from .parse_file import read_json_file, read_yaml_file
 # 4. читаем содержимое файла в словарь read_'extension'_file()
 # 5. сравниваем словари и получаем результат сравнения find_difference()
 # 6. выводим результат сравнения print()
+YML = ['.yml', '.yaml']
 
-YML =['.yml', '.yaml']
+
 def get_paths_from_commandline():
     parser = argparse.ArgumentParser(description='Compares two '
                                                  'configuration files '
