@@ -68,6 +68,6 @@ options:
 
 ---
 
-This is the first training project of the ["Python Developer"](https://ru.hexlet.io/programs/python) course on [Hexlet.io](https://hexlet.io)
+This is the second training project of the ["Python Developer"](https://ru.hexlet.io/programs/python) course on [Hexlet.io](https://hexlet.io)
 
 > GitHub [@Vitaly Сhasovskih](https://github.com/vitalychasovskih)
