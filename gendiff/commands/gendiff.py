@@ -39,7 +39,20 @@ def get_formatted_value(value):
     return formatted_value
 
 
-def find_difference(dict1, dict2):
+def flatten(nested_dict={}, flatten_dict={}, keys=[]):
+    for key, value in sorted(nested_dict.items()):
+        new_keys = keys.copy()
+        new_keys.append(key)
+        if isinstance(value, dict):
+            flatten(value, flatten_dict, new_keys)
+        else:
+            flatten_dict[tuple(new_keys)] = value
+    return flatten_dict
+
+
+def find_difference(old_dict1, old_dict2):
+    dict1 = flatten(old_dict1)
+    dict2 = flatten(old_dict2)
     merged_dictionary = {**dict1, **dict2}
     result = ''
     for key, value in sorted(merged_dictionary.items()):
